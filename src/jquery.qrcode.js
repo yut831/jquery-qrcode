@@ -1,5 +1,5 @@
 (function( $ ){
-	$.fn.qrcode = function(options) {
+	$.fn.qrcode = function(options, cvswidth, cvsheight) {
 		// if options is string, 
 		if( typeof options === 'string' ){
 			options	= { text: options };
@@ -9,8 +9,8 @@
 		// typeNumber < 1 for automatic calculation
 		options	= $.extend( {}, {
 			render		: "canvas",
-			width		: 256,
-			height		: 256,
+			width		: cvswidth,
+			height		: cvsheight,
 			typeNumber	: -1,
 			correctLevel	: QRErrorCorrectLevel.H,
                         background      : "#ffffff",
